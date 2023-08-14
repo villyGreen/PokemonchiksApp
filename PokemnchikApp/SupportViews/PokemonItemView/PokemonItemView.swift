@@ -22,8 +22,8 @@ struct PokemonItemView: View {
             Color(.white)
             
             VStack {
-                PokemonImage(imageLink: viewModel.item.pokemon.url, side: .front)
-                    .aspectRatio(.infinity, contentMode: .fill)
+                PokemonImage(url: viewModel.item.pokemon.url, side: .front)
+                    .frame(width: 50, height: 50)
                 VStack(alignment: .center, spacing: 8) {
                     Text(viewModel.getTitleName())
                     Button(viewModel.item.buttonTitle) {

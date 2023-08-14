@@ -17,9 +17,10 @@ struct DetailScreenView: View {
     var body: some View {
         VStack {
             HStack {
-                PokemonImage(imageLink: viewModel.item.pokemon.url, side: .front)
-                PokemonImage(imageLink: viewModel.item.pokemon.url, side: .back)
+                PokemonImage(url: viewModel.item.pokemon.url, side: .front)
+                PokemonImage(url: viewModel.item.pokemon.url, side: .back)
             }
+            .aspectRatio(contentMode: .fit)
             VStack {
                 
                 CellView(keyValue: ("Name", viewModel.item.pokemon.name))
